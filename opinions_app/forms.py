@@ -10,7 +10,7 @@ class OpinionForm(FlaskForm):
                     Length(1, 128)]
     )
     text = TextAreaField(
-        'Напишите мнение', 
+        'Напишите мнение',
         validators=[DataRequired(message='Обязательное поле')]
     )
     source = URLField(
@@ -18,4 +18,3 @@ class OpinionForm(FlaskForm):
         validators=[Length(1, 256), Optional()]
     )
     submit = SubmitField('Добавить')
-    
